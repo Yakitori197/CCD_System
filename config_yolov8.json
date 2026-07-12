@@ -1,0 +1,27 @@
+{
+  "_comment": "Profile：YOLOv8 預訓練模型（物體檢測模式，檢測到產品=OK，沒檢測到=NG）",
+
+  "camera_index": 0,
+  "camera_width": 1920,
+  "camera_height": 1080,
+  "camera_fps": 30,
+  "camera_backend": "opencv",
+
+  "model_path": "./models/yolov8n.pt",
+  "confidence_threshold": 0.5,
+  "iou_threshold": 0.45,
+  "device": "cpu",
+  "detection_mode": "object",
+  "ng_classes": [],
+  "ok_classes": [],
+
+  "rejection_enabled": false,
+  "rejection_delay_ms": 500,
+  "rejection_pulse_ms": 100,
+  "serial_port": "COM3",
+  "serial_baudrate": 9600,
+
+  "save_ok_images": false,
+  "save_ng_images": true,
+  "output_dir": "./rejection_output"
+}

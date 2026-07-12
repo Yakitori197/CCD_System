@@ -1,0 +1,27 @@
+{
+  "_comment": "Profile：瑕疵檢測模型（檢測到缺陷=NG，沒檢測到=OK）。啟動時複製為 config.json 或以 ConfigManager('config_defect.json') 載入",
+
+  "camera_index": 0,
+  "camera_width": 1920,
+  "camera_height": 1080,
+  "camera_fps": 30,
+  "camera_backend": "opencv",
+
+  "model_path": "./models/your_defect_model.pt",
+  "confidence_threshold": 0.5,
+  "iou_threshold": 0.45,
+  "device": "cpu",
+  "detection_mode": "defect",
+  "ng_classes": [],
+  "ok_classes": [],
+
+  "rejection_enabled": true,
+  "rejection_delay_ms": 500,
+  "rejection_pulse_ms": 100,
+  "serial_port": "COM3",
+  "serial_baudrate": 9600,
+
+  "save_ok_images": false,
+  "save_ng_images": true,
+  "output_dir": "./rejection_output"
+}

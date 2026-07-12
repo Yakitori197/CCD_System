@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# 運行時輸出（檢測影像與日誌，含產線照片，不進版控）
+rejection_output/
+logs/
+log_*/
+
+# 客戶訓練模型不公開（標準預訓練模型 yolov8n.pt 保留）
+models/*.pt
+!models/yolov8n.pt
+
+# 環境
+.env
+.env.*
+.venv/
+venv/
+
+# Windows
+Thumbs.db
+Desktop.ini

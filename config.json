@@ -1,0 +1,30 @@
+{
+  "_comment": "CCD 系統主設定檔。註解一律用 _comment 欄位（JSON 不支援 // 註解，寫了會直接報錯）",
+
+  "camera_index": 0,
+  "camera_width": 1920,
+  "camera_height": 1080,
+  "camera_fps": 30,
+  "camera_backend": "opencv",
+
+  "_comment_model": "model_path 指向自己的模型；detection_mode: auto=自動識別 / defect=檢測到=NG / object=檢測到=OK",
+  "model_path": "./models/yolov8n.pt",
+  "confidence_threshold": 0.5,
+  "iou_threshold": 0.45,
+  "device": "cpu",
+  "detection_mode": "auto",
+
+  "_comment_classes": "分類模型建議顯式宣告 ok_classes / ng_classes；留空則以類別名稱關鍵字自動識別",
+  "ng_classes": [],
+  "ok_classes": [],
+
+  "rejection_enabled": false,
+  "rejection_delay_ms": 500,
+  "rejection_pulse_ms": 100,
+  "serial_port": "COM3",
+  "serial_baudrate": 9600,
+
+  "save_ok_images": false,
+  "save_ng_images": true,
+  "output_dir": "./rejection_output"
+}
